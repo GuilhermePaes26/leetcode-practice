@@ -1,4 +1,4 @@
-// soma utilizando função recursiva
+// pegando o maior numero de uma lista utilizando função recursiva
 
 let numbers = [2, 4, 6, 127, 24, 32, 128];
 
@@ -10,4 +10,4 @@ function getmaiornumber(array) {
   return array[0] > maiorDoResto ? array[0] : maiorDoResto;
 }
 
-console.log(getmaiornumber(numbers)); // Resultado: 32
+console.log(getmaiornumber(numbers));
