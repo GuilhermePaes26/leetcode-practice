@@ -78,3 +78,13 @@ book.display();
 console.log(book.size);
 book.remove('Spain');
 book.display();
+
+const listTelefonica = new HashTable();
+
+listTelefonica.set('John', 99991239999);
+listTelefonica.set('Doe', 99878688999);
+listTelefonica.set('Lorem', 99999998);
+
+listTelefonica.display();
+
+console.log(listTelefonica.get('Renata'));
