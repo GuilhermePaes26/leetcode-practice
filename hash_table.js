@@ -87,4 +87,4 @@ listTelefonica.set('Lorem', 99999998);
 
 listTelefonica.display();
 
-console.log(listTelefonica.get('Lorem'));
+console.log(listTelefonica.get('Lorem ipsum'));
