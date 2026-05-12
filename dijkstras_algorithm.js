@@ -3,28 +3,40 @@
 
 const graph = {};
 graph.start = {};
-graph.start.a = 6;
+graph.start.a = 5;
 graph.start.b = 2;
 
 graph.a = {};
-graph.a.fin = 1;
+graph.a.c = 4;
+graph.a.d = 2;
 
 graph.b = {};
-graph.b.a = 3;
-graph.b.fin = 5;
+graph.b.a = 8;
+graph.b.d = 7;
+
+graph.c = {};
+graph.c.d = 6;
+graph.c.fin = 3;
+
+graph.d = {};
+graph.d.fin = 1;
 
 graph.fin = {};
 
 // tabela de custos
 const costs = {};
-costs.a = 6;
+costs.a = 5;
 costs.b = 2;
+costs.c = Infinity;
+costs.d = Infinity;
 costs.fin = Infinity;
 
 // tabela de pais
 const parents = {};
 parents.a = 'start';
 parents.b = 'start';
+parents.c = null;
+parents.d = null;
 parents.fin = null;
 
 let processed = [];
