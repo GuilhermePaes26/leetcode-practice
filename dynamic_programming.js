@@ -38,3 +38,28 @@ const longestSubstring = (firstWord = '', secondWord = '') => {
 
 console.log(longestSubstring('vista', 'hish'));
 console.log(longestSubstring('fish', 'hish'));
+
+// agora vou pegar a maior subsequencia em comum
+
+const longestCommonSubsequence = (firstWord = '', secondWord = '') => {
+  const matriz = JSON.parse(
+    JSON.stringify(createMatriz(firstWord.length, secondWord.length)),
+  );
+  if (matriz.length === 0 || matriz[0].length === 0) return 0;
+  for (let i = 0; i < firstWord.length; i++) {
+    for (let j = 0; j < secondWord.length; j++) {
+      if (firstWord[i] === secondWord[j]) {
+        matriz[i][j] = (i && j) > 0 ? matriz[i - 1][j - 1] + 1 : 1;
+      } else {
+        matriz[i][j] = Math.max(
+          i > 0 ? matriz[i - 1][j] : 0,
+          j > 0 ? matriz[i][j - 1] : 0,
+        );
+      }
+    }
+  }
+  return matriz[firstWord.length - 1][secondWord.length - 1];
+};
+
+console.log(longestCommonSubsequence('fish', 'fosh'));
+console.log(longestCommonSubsequence('fort', 'fosh'));
